@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LoanContacts</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/loan-contacts.css">
+  </head>
+  <body>
+    <script>
+      window.LoanContactsENV = {{ENV}};
+      window.EmberENV = window.LoanContactsENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/loan-contacts.js"></script>
+    <script>
+      window.LoanContacts = require('loan-contacts/app')['default'].create(LoanContactsENV.APP);
+    </script>
+  </body>
+</html>
